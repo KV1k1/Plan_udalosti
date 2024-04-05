@@ -1,5 +1,5 @@
 <?php
-  require('../_inc/functions.php');
+  require('_inc/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php 'Moj web | '. (basename($_SERVER["SCRIPT_NAME"], '.php'));?></title>
   <?php
-      add_stylesheet();
+    add_stylesheets();
   ?>
 </head>
 <body>

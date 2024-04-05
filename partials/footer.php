@@ -32,8 +32,8 @@
             </div>
         </div>
     </footer>
-    <?php
-      add_scripts();
-    ?>
+<?php
+    add_scripts();
+?>
 </body>
 </html>

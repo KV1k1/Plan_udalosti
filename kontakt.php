@@ -1,21 +1,6 @@
 <?php
     include_once('partials/header.php');
 ?>    
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--meta značky-->
-    <meta name="description" content="Kontaktujte nás a získajte viac informácií o našich službách profesionálnych organizátorov udalostí. Môžeme vám pomôcť s plánovaním svadieb, firemných podujatí a ďalších špeciálnych udalostí.">
-    <meta name="keywords" content="kontakt, kontaktujte nás, informácie, plánovanie udalostí, svadby, firemné podujatia, event management, špeciálne udalosti">
-    <meta name="author" content="Viktória Kovácsová">
-
-    <title>Kontakt</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-</head>
 <body class="bgindex">
     <main>
         <!--formulár-->
@@ -67,6 +52,4 @@
         <!--info, copyright-->
 <?php
     include_once('partials/footer.php');
-?>    
-</body>
-</html>
+?>

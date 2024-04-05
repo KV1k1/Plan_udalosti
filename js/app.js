@@ -14,7 +14,7 @@ function validateForm(event) {
     } else {
         if (!taskAdded) {
             // otvorí ty.html keď, polia sú vyplnené
-            window.open("ty.html", '_blank');
+            window.open("ty.php", '_blank');
         }
     }
     // vynuluje taskAdded po overení
