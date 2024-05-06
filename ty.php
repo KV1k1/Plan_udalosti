@@ -1,12 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diky</title>
-</head>
-<body>
-    <img src="img/ty.jpeg" alt="" width="100%">
-    <script src="js/app.js"></script>
-</body>
-</html>
+<?php
+include('partials/header.php');
+?> 
+<main>
+      
+      <section class="container">
+        <div class="row">
+          <div class="col-100 text-center">
+              <h2>Ďakujeme za vyplnenie formulára</h2>
+               <?php
+                  //print_r($_POST);
+                  //$conn = db_connection();
+                  $contact_object = new Contact();
+                  $contact_object->insert();
+               ?>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+<?php
+    include_once('partials/footer.php')
+?> 
