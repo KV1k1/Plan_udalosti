@@ -8,52 +8,10 @@
     <main>
 
         <!--slideshow - banner s textom-->
-        <div class="slideshow">
-            <div class="maintitle bg-dark rounded bg-opacity-50 text-center">Vy len kludne snívajte, my to premeníme na skutočnosť</div>
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
-                        <img src="img/p2.jpeg" class="d-block w-100" height="650px" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="img/p1.jpeg" class="d-block w-100" height="650px" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="img/p3.jpeg" class="d-block w-100" height="650px" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="img/p5.jpeg" class="d-block w-100" height="650px" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>        
-        </div>
-
-          
-
-          <!--text-->
-          <div class="container-fluid padding bg-white rounded bg-opacity-50 p-5">
-          <div class="row welcome text-center">
-            <div class="col-12">
-                <p style= "font-weight: bold;" class="p-2">Sídlime na Slovensku, ale cestujeme po celom svete</p>
-            </div>
-            <div class="col-12">
-                <h1 class="display-2 p-2" style="color: rgb(42, 99, 81); text-decoration: underline;">Svadby & Plánovanovanie udalostí</h1>
-            </div>
-            <div class="col-12">
-                <p class="lead">Od svadieb šitých na mieru po náročné firemné podujatia, ktoré posilňujú firemné vzťahy, Moon Events má talent pre premenu špeciálnych miest v nezabudnuteľné zážitky.</p>
-                <p>Sme váš spoľahlivý partner v organizovaní nezabudnuteľných udalostí, či už ide o svadby, firemné podujatia alebo oslavy. S naším záväzkom k detailom a kreativitou vytvoríme pre vás udalosť presne podľa vašich predstáv.</p>            </p>
-                <p>S nami sa vaše sny stávajú skutočnosťou!</p>
-            </div>
-          </div>
-          </div>
+        <?php
+        echo generate_slideshow();
+        echo generate_text_section();
+        ?>
 
           <br><br><br><br>
 

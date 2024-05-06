@@ -1,21 +1,6 @@
 <?php
     include_once('partials/header.php');
 ?> 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--meta znacky-->
-    <meta name="description" content="Prečítajte si recenzie a skúsenosti našich klientov s našimi službami profesionálnych organizátorov udalostí. Zistite, prečo sme ich šťastne uspokojili pri plánovaní svadieb, firemných podujatí a iných špeciálnych udalostí.">
-    <meta name="keywords" content="recenzie, skúsenosti, klienti, hodnotenia, plánovanie udalostí, spokojnosť, svadby, firemné podujatia, event management">
-    <meta name="author" content="Viktória Kovácsová">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-    <title>Recenzie & Galéria</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
 <body class="bgindex">
     <!--recenzie1 s pomocou carousel + card-->
     <div class="container">
@@ -220,15 +205,9 @@
         
         </div>
     </section>
+    
 
 <?php
     include_once('partials/footer.php');
 ?> 
-
-    <script src="js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-    <script>
-        baguetteBox.run('.tz-gallery');
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body>
 </html>
