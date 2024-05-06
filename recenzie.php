@@ -206,6 +206,7 @@
         </div>
     </section>
     
+    
 
 <?php
     include_once('partials/footer.php');

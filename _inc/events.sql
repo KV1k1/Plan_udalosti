@@ -41,7 +41,7 @@ CREATE TABLE `Contact` (
 
 INSERT INTO `Contact` (`id`, `name`, `email`, `message`, `acceptance`) VALUES
 (1, 'Test', 'test@test.sk', 'Toto je testovacia správa', 1),
-(2, 'Test 2 ', 'test2@test.sk', 'Toto je druhá testovacia správa', 1);
+(2, 'Test 2', 'test2@test.sk', 'Toto je druhá testovacia správa', 1);
 
 -- --------------------------------------------------------
 

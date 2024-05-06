@@ -3,38 +3,6 @@
 ?>
 
 <body class="bgindex sluzby">
-    <!--navigácia - 4 podstránky-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand ms-5" href="#"><img src="img/logo.jpg" width="30" height="30">MooN Events</a> 
-        <!--logo v navigácii-->
-
-        <div class="container-fluid">
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <p>Menu</p>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav gap-3">
-              <li class="nav-item">
-                <a class="nav-link active" style="font-weight: bold;" aria-current="page" href="index.html">Domov</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="o_nas.html">O nás</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sluzby.html">Služby & Cenník</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="kontakt.html">Kontakt</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="recenzie.html">Recenzie & Galéria</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
     <main>
         <!--text1-->
