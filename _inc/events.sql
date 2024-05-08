@@ -174,7 +174,61 @@ ALTER TABLE `Services`
 --
 ALTER TABLE `User`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_type`
+--
+
+CREATE TABLE `event_type` (
+  `id` int(11) NOT NULL,
+  `event_type` varchar(255) NOT NULL,
+  `participants_min` int(11) NOT NULL,
+  `participants_max` int(11) NOT NULL,
+  `duration` varchar(255) NOT NULL,
+  `price_min` int(11) NOT NULL,
+  `price_max` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- Dumping data for table `event_type`
+--
+
+INSERT INTO `event_type` (`id`, `event_type`, `participants_min`, `participants_max`, `duration`, `price_min`, `price_max`) VALUES
+(1, 'Svadba', 50, 100, '6 hodín', 500, 800),
+(2, 'Svadba', 100, 200, '6 hodín', 650, 1250),
+(3, 'Svadba', 200, 999, '6 hodín', 850, 3000),
+(4, 'Vianočná večera', 10, 20, '3 hodiny', 50, 150),
+(5, 'Vianočná večera', 20, 50, '3 hodiny', 85, 200),
+(6, 'Online udalosti', 50, 100, 'Za reláciu', 10, 30),
+(7, 'Online udalosti', 100, 300, 'Za reláciu', 8, 20),
+(8, 'Konferencie', 100, 200, 'Za deň', 150, 450),
+(9, 'Konferencie', 200, 500, 'Za deň', 250, 800),
+(10, 'Školenia', 10, 20, 'Za triedu', 20, 30),
+(11, 'Školenia', 20, 50, 'Za triedu', 30, 50);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `event_type`
+--
+ALTER TABLE `event_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `event_type`
+--
+ALTER TABLE `event_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

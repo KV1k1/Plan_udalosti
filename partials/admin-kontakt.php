@@ -26,12 +26,12 @@
                     echo '<td>'.$c->acceptance;'</td>';
                     echo '<td>
                             <form action="" method="POST">
-                                <button type="submit" name="delete_contact" value="'.$c->id.'"'.'>Vymazať</button>
+                                <button type="submit" name="delete_contact" class="btn btn-danger" value="'.$c->id.'"'.'>Delete</button>
                             </form>
                           </td>';
                     echo '<td>
                             <form action="kontakt-update.php" method="POST">
-                              <button type="submit" name="edit_contact" value="'.$c->id.'"'.'>Editovať</button>
+                              <button type="submit" name="edit_contact" class="btn btn-secondary" value="'.$c->id.'"'.'>Edit</button>
                             </form>
                           </td>';
                   }

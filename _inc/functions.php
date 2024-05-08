@@ -26,12 +26,6 @@ function add_scripts(){
 
 
 
-
-
-
-
-
-
 function generate_menu(): string{
     $menuItems = ''; // Inicializácia premennej pre uloženie HTML kódu navigačného menu
     
@@ -100,6 +94,73 @@ function generate_text_section(): string {
 function redirect_homepage(){
     header("Location: templates/index.php");
     die("Nepodarilo sa nájsť Domovskú stránku");
+}
+
+
+function generateAccordionItem($heading, $collapseId, $title, $content) {
+    echo '
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="' . $heading . '">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#' . $collapseId . '" aria-expanded="false" aria-controls="' . $collapseId . '">
+                ' . $title . '
+            </button>
+        </h2>
+        <div id="' . $collapseId . '" class="accordion-collapse collapse" aria-labelledby="' . $heading . '" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>' . $content . '</p>
+                <a href="https://rebelandsoul.com/five-ps-of-event-planning/" target="_blank" style="text-decoration: none;">Čítajte viac</a>
+            </div>
+        </div>
+    </div>';
+}
+
+function generateAccordion($accordionItems) {
+    echo '
+    <section>
+        <h2 class="text-center nadpis1 p-2 m-5">5 P-iek plánovania udalostí</h2>
+        <div class="accordion text-dark container" id="accordionExample">';
+    foreach ($accordionItems as $item) {
+        generateAccordionItem($item['heading'], $item['collapseId'], $item['title'], $item['content']);
+    }
+    echo '
+        </div>
+    </section>';
+}
+
+
+function generateCollaboratorCard($imgSrc, $name, $description, $link) {
+    echo '
+    <div class="card mb-3 bg-white text-dark bg-opacity-50">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="' . $imgSrc . '" class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title">' . $name . '</h3>
+                    <p class="card-text">' . $description . '</p>
+                    <button class="btn btn-primary"><a class="lnk" href="' . $link . '" target="_blank">Čítajte viac</a></button>
+                </div>
+            </div>
+        </div>
+    </div>';
+}
+
+function generateCollaboratorsSection($collaborators) {
+    echo '
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="m-5 nadpis1">Spolupracujeme s:</h2>
+            </div>';
+
+    foreach ($collaborators as $collaborator) {
+        generateCollaboratorCard($collaborator['imgSrc'], $collaborator['name'], $collaborator['description'], $collaborator['link']);
+    }
+
+    echo '
+        </div>
+    </section>';
 }
 
 ?>

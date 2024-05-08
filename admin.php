@@ -15,6 +15,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
               <?php
                   if($_SESSION['is_admin'] == 1){
                     include('partials/admin-kontakt.php');
+                    include('partials/admin-sluzby.php');
                 }
               ?>
           </div>
