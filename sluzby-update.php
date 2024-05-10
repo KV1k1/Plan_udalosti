@@ -35,8 +35,9 @@ if(isset($_POST['edit_service_id'], $_POST['typ'], $_POST['pocet'], $_POST['trva
 
     $service_object->edit($edit_service_id, $new_data);
 
-    header('Location: admin.php');
-    exit();
+    //header('Location: admin.php');
+    //exit();
+    header_remove('Location: admin.php');
 }
 ?> 
 <main>

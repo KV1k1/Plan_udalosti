@@ -1,5 +1,5 @@
 <?php
-include('partials/header.php');
+include_once('partials/header.php');
 
 $contact_object = new Contact();
 
