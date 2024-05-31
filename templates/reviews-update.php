@@ -1,5 +1,5 @@
 <?php
-include_once('partials/header.php');
+include_once('../partials/header.php');
 
 $review_object = new Reviews();
 $review_data = null;
@@ -29,8 +29,8 @@ if (isset($_POST['edit_review_id'], $_POST['name'], $_POST['event'], $_POST['rev
 
     $review_object->editReview($edit_review_id, $new_data);
 
-    //header('Location: admin.php');
-    //exit();
+    header('Location: admin.php');
+    exit();
 }
 ?>
 <main>
@@ -39,14 +39,14 @@ if (isset($_POST['edit_review_id'], $_POST['name'], $_POST['event'], $_POST['rev
             <div class="col-100 text-center">
                 <form action="reviews-update.php" method="POST">
                     <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" value="<?php echo $name ?? '' ?>"><br>
+                    <input type="text" id="name" name="name" value="<?php echo $name ?>"><br>
                     <label for="event">Event:</label><br>
-                    <input type="text" id="event" name="event" value="<?php echo $event ?? '' ?>"><br>
+                    <input type="text" id="event" name="event" value="<?php echo $event?>"><br>
                     <label for="review">Review:</label><br>
-                    <textarea id="review" name="review"><?php echo $review ?? '' ?></textarea><br>
+                    <textarea id="review" name="review"><?php echo $review?></textarea><br>
                     <label for="image">Image:</label><br>
-                    <input type="text" id="image" name="image" value="<?php echo $image ?? '' ?>"><br>
-                    <input type="hidden" name="edit_review_id" value="<?php echo $edit_review_id ?? '' ?>">
+                    <input type="text" id="image" name="image" value="<?php echo $image?>"><br>
+                    <input type="hidden" name="edit_review_id" value="<?php echo $edit_review_id ?>">
                     <button type="submit">Save Changes</button>
                 </form>
             </div>
@@ -55,5 +55,5 @@ if (isset($_POST['edit_review_id'], $_POST['name'], $_POST['event'], $_POST['rev
 </main>
 
 <?php
-include_once('partials/footer.php');
+include_once('../partials/footer.php');
 ?>

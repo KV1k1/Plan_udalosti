@@ -1,5 +1,5 @@
 <?php
-include_once('partials/header.php');
+include_once('../partials/header.php');
 
 if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
   header('Location: 404.php');
@@ -15,9 +15,9 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
               
         <?php
         if($_SESSION['is_admin'] == 1){
-          include_once('partials/admin-kontakt.php');
-          include_once('partials/admin-sluzby.php');
-          include_once('partials/admin-reviews.php');
+          include_once('../partials/admin-kontakt.php');
+          include_once('../partials/admin-sluzby.php');
+          include_once('../partials/admin-reviews.php');
         }
         ?>
       </div>
@@ -26,5 +26,5 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
 </main>
     
 <?php
-include_once('partials/footer.php');
+include_once('../partials/footer.php');
 ?>

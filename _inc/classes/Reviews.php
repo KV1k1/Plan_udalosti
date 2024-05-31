@@ -24,6 +24,18 @@ class Reviews extends Database
             return [];
         }
     }
+
+    public function select() {
+        try {
+            $query = "SELECT * FROM reviews";
+            $result = $this->db->query($query);
+            $services = $result->fetchAll(PDO::FETCH_ASSOC);
+            return $services;
+        } catch (PDOException $e) {
+            echo "Error retrieving services: " . $e->getMessage();
+            return [];
+        }
+    }
     
     public function deleteReview($review_id)
     {

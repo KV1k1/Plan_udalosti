@@ -1,5 +1,5 @@
 <?php
-include_once('partials/header.php');
+include_once('../partials/header.php');
 
 $review_object = new Reviews();
 
@@ -37,4 +37,6 @@ if (isset($_POST['add_review'])) {
     </section>
 </main>
 
-
+<?php
+include_once('../partials/footer.php');
+?>

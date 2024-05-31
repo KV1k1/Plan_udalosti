@@ -1,5 +1,5 @@
 <?php
-include_once('partials/header.php');
+include_once('../partials/header.php');
 
 $service_object = new Table();
 $service_data = null;
@@ -35,9 +35,9 @@ if(isset($_POST['edit_service_id'], $_POST['typ'], $_POST['pocet'], $_POST['trva
 
     $service_object->edit($edit_service_id, $new_data);
 
-    //header('Location: admin.php');
-    //exit();
-    header_remove('Location: admin.php');
+    header('Location: admin.php');
+    exit();
+    
 }
 ?> 
 <main>
@@ -47,22 +47,22 @@ if(isset($_POST['edit_service_id'], $_POST['typ'], $_POST['pocet'], $_POST['trva
                 <form action="sluzby-update.php" method="POST">
                     <label for="typ">Typ:</label>
                     <br>
-                    <input type="text" id="typ" name="typ" value="<?php echo $typ ?? '' ?>">
+                    <input type="text" id="typ" name="typ" value="<?php echo $typ?>">
                     <br>
                     <label for="pocet">Pocet:</label>
                     <br>
-                    <input type="text" id="pocet" name="pocet" value="<?php echo $pocet ?? '' ?>">
+                    <input type="text" id="pocet" name="pocet" value="<?php echo $pocet?>">
                     <br>
                     <label for="trvanie">Trvanie:</label>
                     <br>
-                    <input type="text" id="trvanie" name="trvanie" value="<?php echo $trvanie ?? '' ?>">
+                    <input type="text" id="trvanie" name="trvanie" value="<?php echo $trvanie?>">
                     <br>
                     <label for="ceny">Ceny:</label>
                     <br>
-                    <input type="text" id="ceny" name="ceny" value="<?php echo $ceny ?? '' ?>">
+                    <input type="text" id="ceny" name="ceny" value="<?php echo $ceny?>">
                     <br>
 
-                    <input type="hidden" name="edit_service_id" value="<?php echo $edit_service_id ?? '' ?>">
+                    <input type="hidden" name="edit_service_id" value="<?php echo $edit_service_id?>">
                     <button type="submit">Uložiť zmeny</button>
                 </form>
             </div>
@@ -71,5 +71,5 @@ if(isset($_POST['edit_service_id'], $_POST['typ'], $_POST['pocet'], $_POST['trva
 </main>
     
 <?php
-include_once('partials/footer.php');
+include_once('../partials/footer.php');
 ?>

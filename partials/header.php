@@ -1,5 +1,5 @@
 <?php
-  require('_inc/functions.php');
+  require('../_inc/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@
  
 <?php
 $pages = array(
-    'Domov' => 'index.php',
+    'Domov' => 'home.php',
     'O nás' => 'o_nas.php',
     'Služby & Cenník' => 'sluzby.php',
     'Kontakt' => 'kontakt.php',
@@ -31,7 +31,7 @@ $menu_object = new Menu($pages);
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand ms-5" href="#"><img src="img/logo.jpg" width="30" height="30">MooN Events</a> 
+    <a class="navbar-brand ms-5" href="#"><img src="../img/logo.jpg" width="30" height="30">MooN Events</a> 
     <!--logo v navigácii-->
 
     <div class="container-fluid">

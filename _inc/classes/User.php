@@ -23,7 +23,9 @@ class User extends Database
             if ($n_rows == 1) {
                 // login je uspesny
                 $_SESSION['logged_in'] = true;
-                $_SESSION['is_admin'] =  $query_run->fetch()->role;
+                $user = $query_run->fetch();
+                $_SESSION['is_admin'] = $user->role;
+                $_SESSION['email'] = $user->email;
                 return true;
             } else {
                 return false;
@@ -32,6 +34,7 @@ class User extends Database
             echo $e->getMessage();
         }
     }
+
     public function register($email, $password)
     {
         try {
@@ -40,7 +43,7 @@ class User extends Database
             // Dáta pre vloženie nového používateľa do databázy
             $data = array(
                 'user_email' => $email,
-                'user_password' => md5($hashed_password),
+                'user_password' => $hashed_password,
                 'user_role' => '0'
             );
 
@@ -57,6 +60,33 @@ class User extends Database
             return false;
         }
     }
-}
 
+    public function getUserDetails($email)
+    {
+        try {
+            $sql = "SELECT email, password FROM User WHERE email = :email";
+            $query_run = $this->db->prepare($sql);
+            $query_run->execute(['email' => $email]);
+            return $query_run->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Chyba pri získavaní údajov používateľa: " . $e->getMessage();
+            return false;
+        }
+    }
+
+    public function updatePassword($email, $new_password)
+    {
+        try {
+            $sql = "UPDATE User SET password = :new_password WHERE email = :email";
+            $query_run = $this->db->prepare($sql);
+            return $query_run->execute([
+                'new_password' => $new_password,
+                'email' => $email
+            ]);
+        } catch (PDOException $e) {
+            echo "Chyba pri aktualizácii hesla: " . $e->getMessage();
+            return false;
+        }
+    }
+}
 ?>

@@ -1,5 +1,5 @@
 <?php
-    include('partials/header.php');
+    include('../partials/header.php');
     // Vytvorenie objektu triedy User
     $user_object = new User();
 
@@ -51,5 +51,5 @@
     </main>
     
 <?php
-    include_once('partials/footer.php')
+    include_once('../partials/footer.php')
 ?>

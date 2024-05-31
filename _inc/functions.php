@@ -1,11 +1,10 @@
-
 <?php
 require('config.php');
 
 function add_stylesheets() {
     echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">';
-    echo '<link rel="stylesheet" href="css/style.css">';
-    $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
+    echo '<link rel="stylesheet" href="../css/style.css">';
+    $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');  //$_SERVER["SCRIPT_NAME"] - získa názov, odstráni príponu ".php" - basename()
     switch($page_name){
         case 'recenzie':
             echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">';
@@ -19,7 +18,7 @@ function add_scripts(){
     switch($page_name){
         case 'recenzie':
             echo('<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>');
-            echo('<script src="js/baguette.js"></script>');
+            echo('<script src="../js/baguette.js"></script>');
             break;
     }
 }
@@ -45,16 +44,16 @@ function generate_slideshow(): string {
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="img/p2.jpeg" class="d-block w-100" height="650px" alt="...">
+                                <img src="../img/p2.jpeg" class="d-block w-100" height="650px" alt="...">
                             </div>
                             <div class="carousel-item" data-bs-interval="3000">
-                                <img src="img/p1.jpeg" class="d-block w-100" height="650px" alt="...">
+                                <img src="../img/p1.jpeg" class="d-block w-100" height="650px" alt="...">
                             </div>
                             <div class="carousel-item" data-bs-interval="3000">
-                                <img src="img/p3.jpeg" class="d-block w-100" height="650px" alt="...">
+                                <img src="../img/p3.jpeg" class="d-block w-100" height="650px" alt="...">
                             </div>
                             <div class="carousel-item" data-bs-interval="3000">
-                                <img src="img/p5.jpeg" class="d-block w-100" height="650px" alt="...">
+                                <img src="../img/p5.jpeg" class="d-block w-100" height="650px" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -92,7 +91,7 @@ function generate_text_section(): string {
 }
 
 function redirect_homepage(){
-    header("Location: templates/index.php");
+    header("Location: templates/home.php"); //redirect
     die("Nepodarilo sa nájsť Domovskú stránku");
 }
 

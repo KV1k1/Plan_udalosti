@@ -1,5 +1,5 @@
 <?php
-// Ensure no output before this point
+ob_start();
 
 $service_object = new Table();
 $services = $service_object->select();
@@ -8,9 +8,11 @@ if(isset($_POST['delete_service'])){
     $service_id = $_POST['delete_service'];
     $service_object->delete($service_id);
     header('Location: admin.php');
+    ob_end_flush(); // End output buffering and flush buffer before redirection
     die();
 }
 
+// Output HTML content after handling form submission
 ?>
 <br><br>
 <h2>Služby</h2>
@@ -27,7 +29,7 @@ echo '<tr>
         <th>Delete</th>
         <th>Edit</th>
       </tr>';
-      foreach ($services as $s) {
+foreach ($services as $s) {
     echo '<tr>';
     echo '<td>' . (isset($s['event_type']) ? $s['event_type'] : '') . '</td>';
     echo '<td>' . (isset($s['participants_min']) ? $s['participants_min'] : '') . ' - ' . (isset($s['participants_max']) ? $s['participants_max'] : '') . '</td>';
@@ -46,5 +48,4 @@ echo '<tr>
     echo '</tr>';
 }
 echo '</table>';
-
 ?>

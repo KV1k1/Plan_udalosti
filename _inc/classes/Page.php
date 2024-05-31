@@ -32,7 +32,7 @@
             $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
             switch($page_name){
                 case 'recenzie':
-                    echo('<script src="js/baguette.js"></script>');
+                    echo('<script src="../js/baguette.js"></script>');
                     break;
             
         }

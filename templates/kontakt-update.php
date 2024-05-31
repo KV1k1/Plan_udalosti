@@ -1,5 +1,5 @@
 <?php
-include_once('partials/header.php');
+include_once('../partials/header.php');
 
 $contact_object = new Contact();
 
@@ -56,5 +56,5 @@ if(isset($_POST['edit_contact_id'], $_POST['name'], $_POST['email'], $_POST['mes
 </main>
     
 <?php
-    include_once('partials/footer.php')
+    include_once('../partials/footer.php')
 ?> 

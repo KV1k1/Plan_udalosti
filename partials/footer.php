@@ -8,7 +8,7 @@
 
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Rýchle odkazy</h5>
-                    <p><a href="index.php" class="text-white" style="text-decoration: none;">Domov</a></p>
+                    <p><a href="home.php" class="text-white" style="text-decoration: none;">Domov</a></p>
                     <p><a href="o_nas.php" class="text-white" style="text-decoration: none;">O nás</a></p>
                     <p><a href="sluzby.php" class="text-white" style="text-decoration: none;">Služby & Cenník</a></p>
                     <p><a href="kontakt.php" class="text-white" style="text-decoration: none;">Kontakt</a></p>

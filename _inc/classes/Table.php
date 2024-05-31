@@ -36,8 +36,7 @@ class Table extends Database
             return [];
         }
     }
-    
-    
+
     public function delete($service_id){
         try{
             $data = array(
